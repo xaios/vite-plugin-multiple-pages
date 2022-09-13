@@ -45,7 +45,7 @@ module.exports = function(option) {
 
         if (option.list.some(i => i.name == target)) {
           let file = fs.readFileSync(CreatePath(`/template/${target}.html`), 'utf-8')
-          res.setHeader('Content-Length', Buffer.byteLength(file, 'utf8'))
+          res.setHeader('Content-Length', Buffer.byteLength(file))
           res.end(file)
         } else {
           next()
