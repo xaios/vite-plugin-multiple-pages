@@ -2,8 +2,11 @@
   "name": "@xaios/vite-plugin-multiple-pages",
   "author": "aizhifeng",
   "description": "Vite3 多页面入口自动管理",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
+  "keywords": [
+    "vite-plugin"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/xaios/vite-plugin-multiple-pages.git"

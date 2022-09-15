@@ -1,7 +1,6 @@
 # vite.config.js 配置
 
 ```javascript
-import Vue from '@vitejs/plugin-vue'
 import MultiplePages from '@xaios/vite-plugin-multiple-pages'
 
 const CONFIG = {
@@ -20,7 +19,7 @@ const CONFIG = {
 // const CONFIG = [{ name: 'main', title: 'main' }]
 
 export default {
-  plugins: [Vue(), MultiplePages(CONFIG)]
+  plugins: [MultiplePages(CONFIG)]
 }
 ```
 
@@ -30,9 +29,9 @@ export default {
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <link type='image/x-icon' rel='shortcut icon' href='<%= ICON %>' />
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link type='image/x-icon' rel='shortcut icon' href='<%= ICON %>'>
     <title><%= TITLE %></title>
   </head>
 
@@ -49,10 +48,8 @@ export default {
 - src
   - pages
     - main
-      - index.vue
       - index.js，默认根据传入的配置读取对应目录下的 index.js 作为入口
     - user
-      - index.vue
       - index.js
 - template，临时入口模板目录，程序会自动覆盖此目录，需要注意
 - vite.config.js
@@ -64,3 +61,5 @@ Vite3 必须使用 Node.js 14.18+ 或 16+ 的版本，15 及更旧的版本已�
 插件基于 Vite3 + Node.js 16.16.0 开发，所以建议的使用环境也是这样，能确保正常运行，更新的版本可能会在后续兼容。
 
 如果开发环境不允许更新全局 Node.js 版本，可以在项目中安装 Node.js 以实现指定版本运行项目：`npm i node@16.16.0`。
+
+本插件使用了 Vite3 特有的插件钩子。
